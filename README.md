@@ -3,3 +3,6 @@ Simulation of a multi-agent system, where 5 robots organize a toy warehouse by s
 
 # Codigo Unity en: 
 https://drive.google.com/drive/folders/12eQ6dsi2kVGKzoI43YKAfsMz4vcSi_WT?usp=drive_link
+
+# Scripts de vision computacional y Unity
+Los scripts utilizados etsan en este repo en la carpeta de code
