@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://ontology.owl"
+         xmlns="file://ontology.owl#">
+
+<owl:Ontology rdf:about="file://ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_target">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Tile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_stack">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Stack"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contains_object">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Stack"/>
+  <rdfs:range rdf:resource="#Object"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#stackTile">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Stack"/>
+  <rdfs:range rdf:resource="#Tile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_Position">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Tile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_color">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Color"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_state">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#State"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_carrying">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+  <rdfs:range rdf:resource="#Object"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#object_in_tile">
+  <rdfs:range rdf:resource="#Object"/>
+  <rdfs:domain rdf:resource="#Tile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#robot_in_tile">
+  <rdfs:range rdf:resource="#Agent"/>
+  <rdfs:domain rdf:resource="#Tile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_tiles">
+  <rdfs:range rdf:resource="#Tile"/>
+  <rdfs:domain rdf:resource="#Almacen"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#stack_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#Stack"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_id">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#Agent"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#color_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#Color"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#state_value">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#State"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Agent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RobotCuboOnto">
+  <rdfs:subClassOf rdf:resource="#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RobotWarriorOnto">
+  <rdfs:subClassOf rdf:resource="#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RobotPelotaOnto">
+  <rdfs:subClassOf rdf:resource="#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RobotDinoOnto">
+  <rdfs:subClassOf rdf:resource="#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RobotCarroOnto">
+  <rdfs:subClassOf rdf:resource="#Agent"/>
+</owl:Class>
+
+<owl:Class rdf:about="#State">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Stack">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Object">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Target">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectCubo">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectWarrior">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectPelota">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectDino">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ObjectCarro">
+  <rdfs:subClassOf rdf:resource="#Object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tile">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Almacen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Color">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+
+</rdf:RDF>
